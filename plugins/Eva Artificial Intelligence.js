@@ -139,21 +139,21 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         var trmsg = ''
         try {
             if (ldet[0][0] !== 'english') {
-                ceviri = await translate(finm, {from: 'auto', to: 'EN'});
+                ceviri = await translate(finm, {from: 'auto', to: 'en'});
                 trmsg = ceviri.text
             }
             else { trmsg = finm }
         } catch { 
             ceviri = await translate(finm, {
                 from: 'auto', 
-                to: 'EN'
+                to: 'en'
             });            
             trmsg = ceviri.text           
         }
         var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
         var fins = ''                           
         if (conf.LANG !== 'EN') {
-            ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG});           
+            ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG.toLowerCase()});           
             fins = ceviri.text            
         } else { 
             fins = payload_client.result 
@@ -178,20 +178,20 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                         var trmsg = ''
                         try {                        
                             if (ldet[0][0] !== 'english') {
-                                ceviri = await translate(finm, {from: 'auto', to: 'EN'});                               
+                                ceviri = await translate(finm, {from: 'auto', to: 'en'});                               
                                 trmsg = ceviri.text                              
                             } else { trmsg = finm }
                         } catch { 
                             ceviri = await translate(finm, {
                                 from: 'auto', 
-                                to: 'EN'
+                                to: 'en'
                             });                           
                             trmsg = ceviri.text                         
                         }
                         var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
-                            ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG});                           
+                            ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG.toLowerCase()});                           
                             fins = ceviri.text                            
                         } else { 
                             fins = payload_client.result 
@@ -211,20 +211,20 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                     var trmsg = ''
                     try {                    
                         if (ldet[0][0] !== 'english') {
-                            ceviri = await translate(finm, {from: 'auto', to: 'EN'});                            
+                            ceviri = await translate(finm, {from: 'auto', to: 'en'});                            
                             trmsg = ceviri.text                           
                         } else { trmsg = finm }
                     } catch {
                         ceviri = await translate(finm, {
                             from: 'auto', 
-                            to: 'EN'
+                            to: 'en'
                         });              
                         trmsg = ceviri.text
                     }                   
                     var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
                     var fins = ''                           
                     if (conf.LANG !== 'EN') {
-                        ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG});                        
+                        ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG.toLowerCase()});                        
                         fins = ceviri.text                     
                     } else { 
                         fins = payload_client.result 
@@ -242,20 +242,20 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                 var trmsg = ''
                 try {                
                     if (ldet[0][0] !== 'english') {
-                        ceviri = await translate(finm, {from: 'auto', to: 'EN'});                       
+                        ceviri = await translate(finm, {from: 'auto', to: 'en'});                       
                         trmsg = ceviri.text                      
                     } else { trmsg = finm }
                 } catch {
                     ceviri = await translate(finm, {
                         from: 'auto', 
-                        to: 'EN'
+                        to: 'en'
                     });                    
                     trmsg = ceviri.text                 
                 }
                 var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
                 var fins = ''                           
                 if (conf.LANG !== 'EN') {
-                    ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG});                   
+                    ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG.toLowerCase()});                   
                     fins = ceviri.text                
                 } else { 
                     fins = payload_client.result 
@@ -279,7 +279,7 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
             .on('end', async () => {
                 const recognizedText = await recognizeAudio()           
                 var ssc = ''
-                ceviri = await translate(recognizedText, {from: 'auto', to: 'EN' });               
+                ceviri = await translate(recognizedText, {from: 'auto', to: 'en' });               
                 ssc = ceviri.text               
                 var unique_ident = ''
                 if (conf.WORKTYPE == 'private') {
@@ -293,7 +293,7 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
                 var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
                 var fins = ''                           
                 if (conf.LANG !== 'EN') {
-                    ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG});                    
+                    ceviri = await translate(payload_client.result, {from: 'auto', to: conf.LANG.toLowerCase()});                    
                     fins = ceviri.text                   
                 } else { 
                     fins = payload_client.result 
