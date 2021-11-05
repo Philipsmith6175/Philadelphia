@@ -26,7 +26,7 @@ module.exports = {
     ANTILINKMSG: process.env.ANTILINK_MESSAGE === undefined ? 'default' : process.env.ANTILINK_MESSAGE,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     PROXY: process.env.PROXY === undefined ? 'false' : process.env.PROXY,
-    GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
+    GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://www.linkpicture.com/q/Screenshot_20211105-201936_1.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
