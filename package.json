@@ -1,14 +1,14 @@
 {
-  "name": "Philadelphia",
+  "name": "WhatsAsenaDuplicated",
   "version": "1.3.6",
-  "description": "Philadelphia project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+  "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
   "main": "./WhatsAsenaDuplicated/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Philipsmith6175/Philadelphia.git"
+    "url": "git+https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git"
   },
   "keywords": [
     "whatsapp",
@@ -24,13 +24,13 @@
     "whatsapp api",
     "WhatsAsena"
   ],
-  "author": "Philip Smith / Philip Smith",
-  "developer": "Abhinav / @Toxic Devil",
+  "author": "AsenaDev / Yusuf Usta",
+  "developer": "AsenaDev / @phaticusthiccy",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated/issues"
   },
-  "homepage": "https://github.com/Philipsmith6175/Philadelphia#readme",
+  "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
     "whatsasena-npm": "^1.3.0"
   }
